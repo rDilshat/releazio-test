@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Releazio Badge Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@rlzio/sdk"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1>My Awesome App</h1>
+      <div id="badge-container"></div>
+    </div>
+
+    <script>
+      ;(async () => {
+        await ReleazioSDK.init({
+          apiKey: 'FvO+jiTj9l2w2lFM/aTJVmNUHnt4/ygw1yN/VP3xduw=',
+          appVersionName: '1.0.0',
+          appVersionCode: '100',
+          channel: 'appstore',
+        })
+
+        await ReleazioSDK.renderBadge('#badge-container')
+      })()
+    </script>
+  </body>
+</html>
