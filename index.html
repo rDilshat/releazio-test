@@ -3,29 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>Releazio Badge Demo</title>
-    <script src="https://cdn.jsdelivr.net/npm/@rlzio/sdk@1.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@rlzio/sdk@1.2.1"></script>
   </head>
   <body>
     <div id="root">
       <h1>My Awesome App</h1>
-      <div id="badge-container"></div>
+      <div id = "badge-container" class = "releazio-badge-container-dark"></div>
     </div>
     <script>
       ;(async () => {
         await ReleazioSDK.init({
-          apiKey: 'v47QL+4QL/RT7DrkgS6AtivDVAZy7VP6SffZOY6IcPU=',
+          apiKey: '7VQA9J4owProfixBIffQHAWazMmbdTMgM0yP1ZeFbFU=',
           appVersionName: '1.0.0',
           appVersionCode: '100',
           channel: 'web',
-          enableModals: false,
+          enableModals: true,
           endpoint: 'https://check.dev.releazio.com',
+          // language: 'en'
         })
-
+        
+        ReleazioSDK.changeLanguage('ru')
         await ReleazioSDK.renderBadge('#badge-container', )
       })()
     </script>
   </body>
 </html>
-
-
-
